@@ -20,7 +20,7 @@ Enfin, pour vérifier si 192.168.1.150 était déjà prise, j'ai utilisé grep p
 
 Grâce à cela, je pouvais être sûr que l'IP était disponible avant de l'attribuer à ma machine virtuelle, ce qui m'a permis d'éviter un conflit d'adresses sur le réseau.
 
-![Description de l'image](https://github.com/Grane928/Projet-AD/blob/main/Capture%20d%E2%80%99%C3%A9cran%202025-08-24%20153704.png?raw=true)
+<img width="1277" height="805" alt="Capture d’écran 2025-08-24 153704" src="https://github.com/user-attachments/assets/9ea34d3e-e6b7-405b-a2c0-b82c01e51a88" />
 
 Étape 2 : Configuration de l'adresse IP statique sur Windows Server
 
@@ -30,73 +30,65 @@ Une fois que j'ai vérifié la disponibilité de l'IP, j'ai passé à l'étape s
 
 Pour commencer, j'ai ouvert les paramètres de la carte réseau de la machine virtuelle. Dans le Panneau de configuration de Windows Server, j'ai cliqué sur Ethernet pour accéder à ses propriétés. Ensuite, j'ai sélectionné Propriétés pour configurer l'adresse IP.
 
-![Description de l'image](https://raw.githubusercontent.com/Grane928/Projet-AD/ea528575f94ddd5497574107a3539b1c4eab5e00/Capture%20d%E2%80%99%C3%A9cran%202025-08-24%20153846.png?token=BSPLBDJGOXRBBHQU7C6SA73IVM2I2)
+<img width="1024" height="764" alt="Capture d’écran 2025-08-24 153846" src="https://github.com/user-attachments/assets/a8f4578a-3ab0-48a1-afa4-79a129dbbdc0" />
 
 2. Attribution de l'adresse IP statique
 
 Dans l'onglet Propriétés, j'ai sélectionné Protocole Internet Version 4 (TCP/IPv4) et configuré l'adresse IP manuellement. J'ai entré l'adresse 192.168.1.150, la masque de sous-réseau 255.255.255.0, et la passerelle par défaut 192.168.1.254. Cela a permis de définir une adresse statique pour mon serveur, ce qui est essentiel pour que celui-ci soit stable dans le réseau.
 
-![Description de l'image](https://raw.githubusercontent.com/Grane928/Projet-AD/ea528575f94ddd5497574107a3539b1c4eab5e00/Capture%20d%E2%80%99%C3%A9cran%202025-08-24%20154836.png?token=BSPLBDNCNRIYEFUC7CSATS3IVM2I2)
+<img width="1023" height="765" alt="Capture d’écran 2025-08-24 154836" src="https://github.com/user-attachments/assets/f833aeb7-3ddf-4a94-ae35-6e9faccfc4ce" />
 
 3. Vérification de l'adresse IP
 
 Après avoir configuré l'adresse IP, j'ai ouvert une fenêtre de commande (CMD) et utilisé la commande `ipconfig` pour vérifier que l'adresse IP avait bien été attribuée au serveur. La sortie m'a montré l'IP 192.168.1.150, confirmant que la configuration était correcte et que le serveur était prêt à être utilisé dans le réseau.
 
-![Description de l'image](https://raw.githubusercontent.com/Grane928/Projet-AD/ea528575f94ddd5497574107a3539b1c4eab5e00/Capture%20d%E2%80%99%C3%A9cran%202025-08-24%20155756.png?token=BSPLBDPOHJMTFQ5XQQKZTBLIVM2I2)
+<img width="1020" height="768" alt="Capture d’écran 2025-08-24 155756" src="https://github.com/user-attachments/assets/32b4456f-9ab2-4858-a3f3-6ca36c77d9eb" />
 
 Étape 1 : Lancement de l'assistant d'ajout de rôles et de fonctionnalités
 
-Image 1 :
-
-
-Dans cette première étape, j'ouvre le gestionnaire de serveur sur Windows Server, puis je commence l'assistant "Add Roles and Features". Cette fenêtre me guide pour l'installation de rôles et de fonctionnalités sur le serveur.
+<img width="1019" height="766" alt="Capture d’écran 2025-08-24 160145" src="https://github.com/user-attachments/assets/48c2ced4-b19c-4d6f-ad72-929e384de577" />
 
 Étape 2 : Sélection du type d'installation
 
-Image 2 :
+Dans cette première étape, j'ouvre le gestionnaire de serveur sur Windows Server, puis je commence l'assistant "Add Roles and Features". Cette fenêtre me guide pour l'installation de rôles et de fonctionnalités sur le serveur.
 
-
-Ensuite, je choisis l'option "Role-based or feature-based installation". Cela permet de configurer un seul serveur en y ajoutant des rôles et fonctionnalités. Cette étape est cruciale pour la configuration du serveur avec les rôles nécessaires.
+<img width="1023" height="766" alt="Capture d’écran 2025-08-24 160559" src="https://github.com/user-attachments/assets/55e14e38-5e6c-476d-91ac-dd7c729dea31" />
 
 Étape 3 : Sélection du serveur de destination
 
-Image 3 :
+Ensuite, je choisis l'option "Role-based or feature-based installation". Cela permet de configurer un seul serveur en y ajoutant des rôles et fonctionnalités. Cette étape est cruciale pour la configuration du serveur avec les rôles nécessaires.
 
-
-Après avoir choisi le type d'installation, je sélectionne le serveur de destination dans le serveur pool. Je m'assure que le serveur qui doit recevoir les rôles et fonctionnalités est bien sélectionné, ici, le serveur avec l'adresse IP 192.168.1.150.
+<img width="1021" height="770" alt="Capture d’écran 2025-08-24 160618" src="https://github.com/user-attachments/assets/3d17e2c9-226f-42d7-bcdf-f86e7dc3e685" />
 
 Étape 4 : Sélection des rôles serveur
 
-Image 4 :
+Après avoir choisi le type d'installation, je sélectionne le serveur de destination dans le serveur pool. Je m'assure que le serveur qui doit recevoir les rôles et fonctionnalités est bien sélectionné, ici, le serveur avec l'adresse IP 192.168.1.150.
 
-
-Dans cette étape, je sélectionne les rôles à ajouter à mon serveur. Ici, j'active le rôle "Active Directory Domain Services" qui permet de transformer le serveur en un contrôleur de domaine, une étape essentielle pour la gestion des utilisateurs et des ressources sur le réseau.
+<img width="1019" height="765" alt="Capture d’écran 2025-08-24 160636" src="https://github.com/user-attachments/assets/bf6a1a5f-0b09-48f2-8867-fead7d83dfd5" />
 
 Étape 5 : Sélection des fonctionnalités supplémentaires
 
-Image 5 :
+Dans cette étape, je sélectionne les rôles à ajouter à mon serveur. Ici, j'active le rôle "Active Directory Domain Services" qui permet de transformer le serveur en un contrôleur de domaine, une étape essentielle pour la gestion des utilisateurs et des ressources sur le réseau.
 
-
-Ensuite, je sélectionne les fonctionnalités additionnelles. Dans ce cas, "Group Policy Management" est ajouté, ce qui est indispensable pour gérer les politiques de groupe au sein du domaine.
+<img width="1023" height="767" alt="Capture d’écran 2025-08-24 160658" src="https://github.com/user-attachments/assets/be02b8bc-a748-4eaa-ae2a-2c95662ad2f0" />
 
 Étape 6 : Configuration d'Active Directory Domain Services (AD DS)
 
-Image 6 :
+Ensuite, je sélectionne les fonctionnalités additionnelles. Dans ce cas, "Group Policy Management" est ajouté, ce qui est indispensable pour gérer les politiques de groupe au sein du domaine.
 
-
-Une fois les rôles et fonctionnalités installés, je configure Active Directory Domain Services. Cela inclut la création du domaine et la configuration des contrôleurs de domaine pour assurer le bon fonctionnement de l'annuaire des utilisateurs.
+<img width="1019" height="766" alt="Capture d’écran 2025-08-24 160723" src="https://github.com/user-attachments/assets/3acd4db6-6f9c-4e58-9250-45c5bb0fac9b" />
 
 Étape 7 : Confirmation des sélections
 
-Image 7 :
+Une fois les rôles et fonctionnalités installés, je configure Active Directory Domain Services. Cela inclut la création du domaine et la configuration des contrôleurs de domaine pour assurer le bon fonctionnement de l'annuaire des utilisateurs.
 
-
-Avant d'installer les rôles et fonctionnalités, je confirme toutes les sélections que j'ai faites : rôles, fonctionnalités et configurations supplémentaires. C'est ici que je peux revoir mes choix et valider avant l'installation finale.
+<img width="1020" height="766" alt="Capture d’écran 2025-08-24 160740" src="https://github.com/user-attachments/assets/2b1c04cc-4b00-47b2-b93f-4bc4af67994f" />
 
 Étape 8 : Progression de l'installation
 
-Image 8 :
+Avant d'installer les rôles et fonctionnalités, je confirme toutes les sélections que j'ai faites : rôles, fonctionnalités et configurations supplémentaires. C'est ici que je peux revoir mes choix et valider avant l'installation finale.
 
+<img width="1019" height="767" alt="Capture d’écran 2025-08-24 161036" src="https://github.com/user-attachments/assets/b1096031-3a6b-4eb4-b2af-a1641e1d4e7f" />
 
 L'installation commence, et l'assistant affiche l'état de la progression. Il est important de vérifier que toutes les étapes sont correctement suivies avant d'aller plus loin dans la configuration du domaine.
 
