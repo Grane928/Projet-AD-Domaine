@@ -88,9 +88,59 @@ Une fois les rôles et fonctionnalités installés, je configure Active Director
 
 Avant d'installer les rôles et fonctionnalités, je confirme toutes les sélections que j'ai faites : rôles, fonctionnalités et configurations supplémentaires. C'est ici que je peux revoir mes choix et valider avant l'installation finale.
 
+L'installation commence, et l'assistant affiche l'état de la progression. Il est important de vérifier que toutes les étapes sont correctement suivies avant d'aller plus loin dans la configuration du domaine.
+
 <img width="1019" height="767" alt="Capture d’écran 2025-08-24 161036" src="https://github.com/user-attachments/assets/b1096031-3a6b-4eb4-b2af-a1641e1d4e7f" />
 
-L'installation commence, et l'assistant affiche l'état de la progression. Il est important de vérifier que toutes les étapes sont correctement suivies avant d'aller plus loin dans la configuration du domaine.
+4. Configuration post-déploiement
+
+Étape 1 : Création du domaine
+
+Une fois l'installation terminée, une alerte m'a indiqué de promouvoir le serveur en contrôleur de domaine. J'ai cliqué sur l'alerte pour démarrer cette étape essentielle.
+J'ai choisi l'option pour ajouter un nouveau domaine dans une nouvelle forêt, puis défini mydomaine.local comme nom de domaine.
+
+<img width="1025" height="767" alt="Capture d’écran 2025-08-24 161639" src="https://github.com/user-attachments/assets/c8b1e1ea-ff84-4cc6-aac7-6f4e00437ffc" />
+
+Étape 2 : Options du contrôleur de domaine
+
+J'ai sélectionné Windows Server 2016 pour les niveaux fonctionnels et activé les services DNS et le catalogue global. J'ai aussi défini un mot de passe pour le mode de récupération.
+
+<img width="1019" height="764" alt="Capture d’écran 2025-08-24 162006" src="https://github.com/user-attachments/assets/6a81eccb-c62e-4942-9a90-8d372620c7f0" />
+
+Étape 3 : Vérification du nom NetBIOS
+
+J'ai vérifié et laissé par défaut le nom NetBIOS mydomaine, adapté pour mon réseau local.
+
+<img width="1020" height="764" alt="Capture d’écran 2025-08-24 162328" src="https://github.com/user-attachments/assets/b8dbee45-f568-4bca-b398-b301bd79b854" />
+
+Étape 4 : Choix des chemins d'installation
+
+Les chemins par défaut pour les bases de données AD DS et SYSVOL étaient suffisants, donc je les ai laissés tels quels.
+
+<img width="1019" height="764" alt="Capture d’écran 2025-08-24 162538" src="https://github.com/user-attachments/assets/08fa536a-3877-4066-ab62-be694008b261" />
+
+Étape 5 : Révision des paramètres
+
+J'ai revu et validé mes configurations avant de continuer l'installation.
+
+<img width="1021" height="766" alt="Capture d’écran 2025-08-24 162622" src="https://github.com/user-attachments/assets/8c7cfd76-1430-4391-884c-a9a002979572" />
+
+Étape 6 : Vérification des prérequis
+
+Les prérequis ont été validés avec succès, ce qui a permis de poursuivre l'installation.
+
+<img width="1019" height="767" alt="Capture d’écran 2025-08-24 163204" src="https://github.com/user-attachments/assets/11d19514-c2c7-4818-bf78-7ecec1e98296" />
+
+Étape 7 : Vérification finale
+
+Une fois l'installation terminée, le gestionnaire de serveur a confirmé que les rôles AD DS et DNS étaient installés et actifs.
+
+<img width="1020" height="764" alt="Capture d’écran 2025-08-24 164642" src="https://github.com/user-attachments/assets/832ca7d5-ff74-48ca-97cf-02399f73a152" />
+
+
+
+
+
 
 
 
